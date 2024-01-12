@@ -1,0 +1,6 @@
+
+blockbeats:
+    wss: https://api.theblockbeats.news/v1/open-api/home-xml
+
+discord:
+    webhook: https://discord.com/api/webhooks
