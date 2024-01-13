@@ -161,3 +161,4 @@ cython_debug/
 
 
 news_push_utils/conf/secret.yaml
+log*

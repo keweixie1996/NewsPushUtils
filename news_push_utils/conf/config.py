@@ -9,7 +9,7 @@ HOME_DIR = Path(__file__).parents[1].resolve()
 CONF_DIR = Path(HOME_DIR, "conf")
 
 
-DEV = True
+DEV = False
 CACHE = "file"      # file or db
 
 
