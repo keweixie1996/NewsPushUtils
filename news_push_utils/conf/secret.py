@@ -16,7 +16,5 @@ secret = yaml.safe_load(open(Path(CONF_DIR, "secret.yaml")))
 
 discord_secret = secret["discord"]
 discord_webhook = discord_secret["blockbeats" if not DEV else "dev"]
-discord_webhook_auth = (
-    f"{discord_webhook['channel']}"
-    f"/{discord_webhook['token']}"
-)
+discord_webhook_auth = discord_webhook["auth"]
+

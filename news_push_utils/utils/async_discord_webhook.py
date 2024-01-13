@@ -18,7 +18,7 @@ from discord_webhook import DiscordWebhook, DiscordEmbed
 
 
 
-class AsyncDiscordWebook(object):
+class AsyncDiscordWebhook(object):
 
     def __init__(self, auth):
         self.endpoint = f"https://discord.com/api/webhooks/{auth}"
@@ -28,7 +28,6 @@ class AsyncDiscordWebook(object):
         webhook = DiscordWebhook(url=self.endpoint, content=content)
         webhook.add_embed(embed)
         response = webhook.execute()
-        print(response)
 
 
     def build_embed(self, title, url, description, author_name):
@@ -65,7 +64,7 @@ async def main():
     title = news["response"]["entries"][1]["title"]
     description = res.find_all("p")[0].text
     auth = ""
-    discord_webhook = AsyncDiscordWebook(auth=auth)
+    discord_webhook = AsyncDiscordWebhook(auth=auth)
     discord_embed = discord_webhook.build_embed(
         title = title,
         url = url,

@@ -4,3 +4,7 @@ blockbeats:
 
 discord:
     webhook: https://discord.com/api/webhooks
+
+cache:
+    file: ~/.news_push_utils/file/blockbeats
+    db: ~/.news_push_utils/db/blockbeats

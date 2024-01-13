@@ -49,9 +49,9 @@ async def main():
     print(news["response"]["entries"][0]["link"])
     #print(news["response"]["entries"][0]["summary"])
     print(news["response"]["entries"][1]["summary"].split("<br />")[0])
-    #print(json.dumps(news["response"]["entries"][1], indent=1))
-    res = BeautifulSoup(news["response"]["entries"][1]["summary"])
-    print(res.find_all("p")[0].text)
+    print(json.dumps(news["response"]["entries"][1], indent=1))
+    #res = BeautifulSoup(news["response"]["entries"][1]["summary"], "html.parser")
+    #print(res.find_all("p")[0].text)
 
 
 
